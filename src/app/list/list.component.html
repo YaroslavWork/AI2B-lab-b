@@ -1,0 +1,19 @@
+<div id="frame">
+  <div class="headerFontDiv">List Component</div>
+  <div class="inputDiv">
+    <input type="text" placeholder="Enter the value..." [(ngModel)]="inputText">
+    <button class="addButton" (click)="inputToArray()">Add</button>
+    <button class="clearButton" (click)="clearList()">Clear List</button>
+  </div>
+  <div class="describeDiv">You have {{elements.length}} elements.</div>
+  <table>
+    <tr>
+      <th>Value</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let el of elements; index as i">
+      <td>{{el}}</td>
+      <td><button class="deleteButton" (click)="removeElement(i)">Delete</button></td>
+    </tr>
+  </table>
+</div>

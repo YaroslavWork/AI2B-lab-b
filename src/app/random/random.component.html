@@ -1,0 +1,9 @@
+<div id="frame">
+  <div class="headerFontDiv">Random Component</div>
+  <div class="describeDiv">Value from {{1}} to {{max}}</div>
+  <div class="randomVal">{{myNumber}}</div>
+  <div class="valueBelow" *ngIf="comparisonNumberToMaxValue() == 0">The value is below half</div>
+  <div class="valueAbove" *ngIf="comparisonNumberToMaxValue() == 1">The value is above half</div>
+  <div class="valueExactly" *ngIf="comparisonNumberToMaxValue() == 2">The value is half</div>
+  <button class="generateButton" (click)="btnClick()">Generate Value</button>
+</div>
